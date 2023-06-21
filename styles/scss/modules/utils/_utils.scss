@@ -18,14 +18,14 @@
     gap: calc(var(--primary-spacing) * 0.625);
  }
 
-.gap-xs { 
+.gap-xs {
     gap: calc(var(--primary-spacing) * 0.75);
 }
 
-.gap-md { 
+.gap-md {
     gap: var(--primary-spacing);
 }
 
-.gap-sm { 
-    gap: var(--primary-spacing) * 0.875;
+.gap-sm {
+    gap: calc(var(--primary-spacing) * 0.875);
 }

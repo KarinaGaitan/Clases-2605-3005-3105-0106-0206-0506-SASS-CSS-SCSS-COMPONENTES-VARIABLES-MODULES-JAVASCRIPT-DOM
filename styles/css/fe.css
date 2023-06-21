@@ -1,64 +1,18 @@
-:root {
-  scroll-behavior: smooth;
-  --primary-max-width: 512px;
-  --primary-spacing: 1.5rem;
-  --primary-main-color: #149eca;
-  --primary-background-color: #7796e4;
-  --secondary-backgroundd-color: #2b303b;
-  --primary-text-color: white;
-  --primary-shadow-color: rgba(120, 133, 199, 0.5);
-  --dark-primary-shadow-color: rgba(255, 255, 255, 0.5);
-  --primary-font-family: "Inconsolata", monospace;
-  /*actualizar de google fonts*/
-}
+/* Error: Top-level selectors may not contain the parent selector "&".
+ *    ,
+ * 10 |     &:hover {
+ *    |     ^
+ *    '
+ *   styles\scss\modules\content\_link.scss 10:5  @import
+ *   styles\scss\fe.scss 8:9                      root stylesheet */
 
-@media (min-width: 768px) {
-  :root {
-    --primary-max-width: 1024px;
-    --primary-spacing: 2rem;
-  }
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: 'Error: Top-level selectors may not contain the parent selector "&".\a    \2577 \a 10 \2502      &:hover {\d\a    \2502      ^\a    \2575 \a   styles\\scss\\modules\\content\\_link.scss 10:5  @import\a   styles\\scss\\fe.scss 8:9                      root stylesheet';
 }
-.header {
-  box-shadow: 0 0 0.125rem 0.0625rem var(--primary-shadow-color);
-}
-
-.nav {
-  padding-top: calc(var(--primary-spacing) / 2);
-  padding-bottom: calc(var(--primary-spacing) / 2);
-}
-
-.container {
-  max-width: var(--primary-max-width);
-  padding-left: var(--primary-spacing);
-  padding-right: var(--primary-spacing);
-  margin: 0 auto;
-}
-
-.flexbox {
-  display: flex;
-}
-.flexbox--header {
-  align-items: center;
-  justify-content: space-between;
-}
-.flexbox--header {
-  align-items: center;
-  justify-content: space-between;
-}
-.flexbox--responsive {
-  flex-direction: column;
-  /*flexbox normal y flexbox responsive*/
-}
-@media (min-width: 768px) {
-  .flexbox--responsive {
-    flex-direction: row;
-  }
-}
-
-.list {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-
-/*# sourceMappingURL=fe.css.map */
