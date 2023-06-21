@@ -41,5 +41,24 @@
   align-items: center;
   justify-content: space-between;
 }
+.flexbox--header {
+  align-items: center;
+  justify-content: space-between;
+}
+.flexbox--responsive {
+  flex-direction: column;
+  /*flexbox normal y flexbox responsive*/
+}
+@media (min-width: 768px) {
+  .flexbox--responsive {
+    flex-direction: row;
+  }
+}
+
+.list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
 
 /*# sourceMappingURL=fe.css.map */
