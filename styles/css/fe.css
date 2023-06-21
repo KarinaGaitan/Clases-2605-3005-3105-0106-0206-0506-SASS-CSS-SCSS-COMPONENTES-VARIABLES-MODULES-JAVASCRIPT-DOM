@@ -1,18 +1,128 @@
-/* Error: Top-level selectors may not contain the parent selector "&".
- *    ,
- * 10 |     &:hover {
- *    |     ^
- *    '
- *   styles\scss\modules\content\_link.scss 10:5  @import
- *   styles\scss\fe.scss 8:9                      root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: 'Error: Top-level selectors may not contain the parent selector "&".\a    \2577 \a 10 \2502      &:hover {\d\a    \2502      ^\a    \2575 \a   styles\\scss\\modules\\content\\_link.scss 10:5  @import\a   styles\\scss\\fe.scss 8:9                      root stylesheet';
+:root {
+  scroll-behavior: smooth;
+  --primary-max-width: 512px;
+  --primary-spacing: 1.5rem;
+  --primary-main-color: #087ea4;
+  --primary-background-color: #16181d;
+  --primary-warming-color: #a6423a;
+  --secondary-backgroundd-color: #2b303b;
+  --primary-text-color: white;
+  --primary-shadow-color: rgba(255,255,255,0.5);
+  --light-primary-shadow-color: rgba(0, 0, 0, 0.5);
+  --dark-primary-shadow-color: rgba(255, 255, 255, 0.5);
+  --primary-font-family: "Inconsolata", monospace;
+  /*actualizar de google fonts*/
 }
+
+@media (min-width: 768px) {
+  :root {
+    --primary-max-width: 1024px;
+    --primary-spacing: 2rem;
+  }
+}
+.header {
+  box-shadow: 0 0 0.125rem 0.0625rem var(--primary-shadow-color);
+}
+
+.nav {
+  padding-top: calc(var(--primary-spacing) / 2);
+  padding-bottom: calc(var(--primary-spacing) / 2);
+}
+
+.container {
+  max-width: var(--primary-max-width);
+  padding-left: var(--primary-spacing);
+  padding-right: var(--primary-spacing);
+  margin: 0 auto;
+}
+
+.flexbox {
+  display: flex;
+}
+.flexbox--header {
+  align-items: center;
+  justify-content: space-between;
+}
+.flexbox--center {
+  align-items: center;
+  align-content: center;
+  justify-items: center;
+  justify-content: center;
+}
+.flexbox--responsive {
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  .flexbox--responsive {
+    flex-direction: row;
+  }
+}
+
+/*flexbox normal y flexbox responsive*/
+.list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.gap-6xs {
+  gap: calc(var(--primary-spacing) * 0.125);
+}
+
+.gap-5xs {
+  gap: calc(var(--primary-spacing) * 0.25);
+}
+
+.gap-4xs {
+  gap: calc(var(--primary-spacing) * 0.375);
+}
+
+.gap-3xs {
+  gap: calc(var(--primary-spacing) * 0.5);
+}
+
+.gap-2xs {
+  gap: calc(var(--primary-spacing) * 0.625);
+}
+
+.gap-xs {
+  gap: calc(var(--primary-spacing) * 0.75);
+}
+
+.gap-md {
+  gap: var(--primary-spacing);
+}
+
+.gap-sm {
+  gap: calc(var(--primary-spacing) * 0.875);
+}
+
+.link {
+  color: inherit;
+  position: relative;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: color 0.25s;
+}
+.link:hover {
+  color: var(--primary-main-color);
+}
+.link::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: -0.125rem;
+  width: 100%;
+  height: 0.125rem;
+  background-color: var(--primary-warning-color);
+  background-color: #a6423a;
+  transform: scale(0);
+  transition: transform 0.25s;
+}
+.link:hover::before {
+  transform: scale(1);
+}
+
+/*# sourceMappingURL=fe.css.map */
