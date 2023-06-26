@@ -50,7 +50,6 @@ console.log(firstName);
 firstName = 'Karina'
 Age = 38
 console.log(firstName);
-console.log(age);
 console.log(MONTHS_OF_THE_YEAR);
 
 const person = {
