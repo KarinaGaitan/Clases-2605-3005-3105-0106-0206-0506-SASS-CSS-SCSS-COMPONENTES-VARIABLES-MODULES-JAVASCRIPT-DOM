@@ -5,11 +5,11 @@ do {
     if (response == 1) {
         let number1 = +prompt('Número 1');
         let number2 = +prompt('Número 2');
-        alert(
-            suma: $(number1 + number2),
-            resta: $(number1 - number2),
-            multiplicación: $(number1 * number2),
-            división: $(number1 / number2),
-        )
+        alert(`
+            suma: ${number1 + number2},
+            resta: ${number1 - number2},
+            multiplicación: ${number1 * number2},
+            división: ${number1 / number2},
+        `)
     }
 } while (response == 1);
