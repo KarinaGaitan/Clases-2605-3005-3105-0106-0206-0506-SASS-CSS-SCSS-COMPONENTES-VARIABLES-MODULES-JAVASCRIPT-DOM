@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nombres Aleatorios</title>
+</head>
+<body>
+    <h1>Nombres Aleatorios</h1>
+    <h2 id="name">Karina Gaitán</h2>
+    <button id="newName">Nuevo Nombre</button>
+
+    <script>
+        document.getElementById('newName').addEventListener('click', () => {
+            document.getElementById('name').innerText = 'Leo';
+        });
+        /*para relacionar JS con html/*
+        /*se pone el evento para decir que a través del click aparezca el nombre Leo*/
+        /*innerText es para que reemplace el texto por otro*/
+    </script>
+</body>
+</html>

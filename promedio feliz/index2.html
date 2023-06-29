@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Promedio feliz2</title>
+</head>
+
+<body>
+    <h1>Promedio feliz2</h1>
+
+    <script>
+        const averageNotes = (note1, note2, note3) => {
+            return (note1 + note2 + note3) / 3;
+        }
+
+        alert('Promedio feliz2');
+        let note1 = +prompt('Ingrese su nota1');
+        let note2 = +prompt('Ingrese su nota2');
+        let note3 = +prompt('Ingrese su nota3');
+
+        alert(averageNotes(note1, note2, note3));
+    </script>
+</body>
+
+</html>
