@@ -21,25 +21,24 @@
         let species;
         let animals = '';
 
-        while (response == '1') {
-            alert('Registre su ser amado');
-            name = prompt('Nombre');
-            age = prompt('Edad');
-            color = prompt('Color');
-            species = prompt('Especie');
-
-            animals +=`
-                Nombre: ${ name },
-                Edad: ${ age },
-                Color: ${ color },
-                Especie: ${ species }
-                ---
-            `;
-
+        do {
             response = prompt ('¿Desea ingresar más patitas? Sí (1) No (Otra tecla)');
+            if (response == '1') {
+                alert('Registre su ser amado');
+                name = prompt('Nombre');
+                age = prompt('Edad');
+                color = prompt('Color');
+                species = prompt('Especie');
 
-        }
-
+                animals +=`
+                    Nombre: ${ name },
+                    Edad: ${ age },
+                    Color: ${ color },
+                    Especie: ${ species }
+                    ---
+                `;
+            }
+        } while (response == '1');
         alert(animals);
 
     </script>
