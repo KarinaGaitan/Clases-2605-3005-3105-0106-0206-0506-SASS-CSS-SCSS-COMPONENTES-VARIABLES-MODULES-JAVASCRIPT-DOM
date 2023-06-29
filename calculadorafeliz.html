@@ -10,19 +10,22 @@
     <script>
         alert('Calculadora feliz');
 
-        const operation = prompt('¿Que operación va a realizar?');
+        const operation = prompt('¿Que operación va a realizar (+,-,*,/)?');
+        const number1 = +prompt('Número 1');
+        const number2 = +prompt('Número 2');
+        let result = 0;
         switch (operation) {
             case '+':
-                alert('suma');
+                result = number1 + number2;
                 break;
             case '-':
-                alert('resta');
+                result = number1 - number2;
                 break;
             case '*':
-                alert('multiplicación');
+                result = number1 * number2;
                 break;
             case '/':
-                alert('división');
+                result = number1 / number2; 
                 break;
             default:
                 alert('No tenemos esa operación');
