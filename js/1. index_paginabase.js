@@ -5,9 +5,13 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 document.addEventListener('DOMContentLoaded', () => {
-    const header = console.log(document.querySelector('.header'));
+    const header = document.querySelector('.header');
+    const nav = document.querySelector('.nav');
+    /*Se selecciona con querySelector para poder utilizar selectores CSS*/
     document.addEventListener('scroll', () => {
         header.classList.toggle('header--scroll', window.scrollY > 0);
-        //const nav = document.querySelector('.nav');
+        nav.classList.toggle('nav--scroll', window.scrollY > 0);
+        /*Toggle es para que aparezca la separación cuando estoy lejos y desaparezca cuando estoy cerca*/
+
     });
 });
