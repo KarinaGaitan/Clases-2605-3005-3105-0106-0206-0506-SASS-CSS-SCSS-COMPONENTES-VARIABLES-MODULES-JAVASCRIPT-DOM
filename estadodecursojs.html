@@ -17,6 +17,8 @@
             return (n1 + n2 + n3) / 3;
         };
 
+        /*función flecha () => {}*/
+
         const courseStatus = (average) => {
             if (average >= 13) {
                 return 'aprobado';
@@ -33,8 +35,8 @@
             let note3 = +prompt('Ingrese nota 3');
 
             let average = averageNotes(note1, note2, note3);
-            alert(`Estado de Curso: ${average} usted a ${courseStatus(average)}`);
-        
+            alert(`Promedio final: ${average} usted a ${courseStatus(average)}`);
+
             response = prompt('¿Usted desea promediar más notas? Sí (1) No (Otra tecla)');
         }
     </script>
