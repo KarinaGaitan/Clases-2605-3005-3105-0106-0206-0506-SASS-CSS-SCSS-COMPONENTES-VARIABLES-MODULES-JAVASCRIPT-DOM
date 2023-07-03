@@ -6,9 +6,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 document.addEventListener('DOMContentLoaded', () => {
     const header = console.log(document.querySelector('.header'));
-    const nav = console.log(document.querySelector('.nav'));
-
     document.addEventListener('scroll', () => {
-        header.classList.add('header--scroll');
+        header.classList.toggle('header--scroll', window.scrollY > 0);
+        //const nav = document.querySelector('.nav');
     });
 });
